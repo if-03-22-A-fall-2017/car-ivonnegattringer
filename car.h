@@ -13,4 +13,23 @@
 #ifndef ___CAR_H
 #define ___CAR_H
 
+enum Type {AIXAM,
+FIAT_MULTIPLA,
+JEEP
+};
+
+enum Color {RED, GREEN, BLUE, ORANGE, SILVER, BLACK};
+typedef struct CarType* Car;
+
+void init();
+void set_acceleration_rate(Car car, int acceleration_rate);
+double get_fill_level(Car car);
+int get_speed(Car car);
+double get_acceleration_rate(Car car);
+Color get_color(Car car);
+Type get_type(Car car);
+Car get_car(enum Type);
+void init_resets_acceleration_rate();
+void accelerate(Car car);
+
 #endif
